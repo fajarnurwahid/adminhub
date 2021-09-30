@@ -305,6 +305,8 @@ body {
 #content main {
 	font-family: var(--poppins);
 	width: 100%;
+	max-height: calc(100vh - 56px);
+	overflow-y: auto;
 	position: relative;
 	padding: 24px 36px;
 	color: var(--dark);
@@ -421,7 +423,8 @@ body {
 	align-items: center;
 	grid-gap: 24px;
 	margin-bottom: 36px;
-	min-width: 340px;
+	min-width: 520px;
+	width: 100%;
 }
 #content main .table-data .todo .head h3,
 #content main .table-data .order .head h3 {
@@ -547,6 +550,15 @@ body {
 
 	#content main {
 		padding: 24px 24px;
+	}
+
+	#content main .box-info {
+		grid-gap: 24px;
+	}
+
+	#content main .table-data {
+		grid-gap: 24px;
+		margin-top: 24px;
 	}
 }
 
