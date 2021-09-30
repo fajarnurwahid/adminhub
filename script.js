@@ -18,3 +18,9 @@ const sideBar = document.querySelector('#sidebar');
 menuBar.addEventListener('click', function () {
 	sideBar.classList.toggle('hide');
 })
+
+
+
+if(window.innerWidth < 1200) {
+	sideBar.classList.add('hide');
+}
