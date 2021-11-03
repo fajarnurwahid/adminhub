@@ -35,6 +35,12 @@ html {
 	overflow-x: hidden;
 }
 
+body.dark {
+	--light: #0C0C1E;
+	--grey: #060714;
+	--dark: #FBFBFB;
+}
+
 body {
 	background: var(--grey);
 	overflow-x: hidden;
@@ -201,6 +207,7 @@ body {
 }
 #content nav .bx.bx-menu {
 	cursor: pointer;
+	color: var(--dark);
 }
 #content nav .nav-link {
 	font-size: 16px;
@@ -228,6 +235,7 @@ body {
 	border-radius: 36px 0 0 36px;
 	outline: none;
 	width: 100%;
+	color: var(--dark);
 }
 #content nav form .form-input button {
 	width: 36px;
@@ -268,6 +276,29 @@ body {
 	height: 36px;
 	object-fit: cover;
 	border-radius: 50%;
+}
+#content nav .switch-mode {
+	display: block;
+	min-width: 50px;
+	height: 25px;
+	border-radius: 25px;
+	background: var(--grey);
+	cursor: pointer;
+	position: relative;
+}
+#content nav .switch-mode::before {
+	content: '';
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	bottom: 2px;
+	width: calc(25px - 4px);
+	background: var(--blue);
+	border-radius: 50%;
+	transition: all .3s ease;
+}
+#content nav #switch-mode:checked + .switch-mode::before {
+	left: calc(100% - (25px - 4px) - 2px);
 }
 /* NAVBAR */
 
@@ -366,6 +397,10 @@ body {
 #content main .box-info li .text h3 {
 	font-size: 24px;
 	font-weight: 600;
+	color: var(--dark);
+}
+#content main .box-info li .text p {
+	color: var(--dark);	
 }
 
 
